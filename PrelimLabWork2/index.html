@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Attendance System</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #6a85b6, #bac8e0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background: white;
+        width: 380px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #6a85b6;
+        border: none;
+        color: white;
+        font-size: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background: #556fa6;
+    }
+
+    .home-btn {
+        background: #95a5a6;
+    }
+
+    .home-btn:hover {
+        background: #7f8c8d;
+    }
+
+    #message {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    ul {
+        text-align: left;
+        padding-left: 20px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    li {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN VIEW -->
+<div class="card" id="loginView">
+    <h1>Attendance Login</h1>
+
+    <input type="text" id="username" placeholder="Full Name">
+    <input type="password" id="password" placeholder="Create / Enter Password">
+
+    <button onclick="login()">Log In</button>
+
+    <div id="message"></div>
+</div>
+
+<!-- ATTENDANCE SUMMARY VIEW -->
+<div class="card" id="summaryView" style="display:none;">
+    <h1>Attendance Summary</h1>
+
+    <ul id="attendanceList"></ul>
+
+<button onclick="downloadAttendance()">Download Attendance</button>
+<button class="home-btn" onclick="goHome()">Home</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

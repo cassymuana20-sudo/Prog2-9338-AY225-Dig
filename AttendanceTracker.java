@@ -296,8 +296,6 @@ public class AttendanceTracker {
      */
     public static void main(String[] args) {
         // Use SwingUtilities to ensure GUI is created on Event Dispatch Thread
-        SwingUtilities.invokeLater(() -> {
-            new AttendanceTracker();
-        });
+        SwingUtilities.invokeLater(AttendanceTracker::new);
     }
 }
