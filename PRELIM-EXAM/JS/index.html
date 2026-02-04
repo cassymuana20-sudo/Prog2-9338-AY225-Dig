@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Record Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌸 Student Record Management System 🌸</h1>
+    <p>Programmer: Karina Cassandra M. Dig – 25-1573-898</p>
+
+    <div class="form-grid">
+        <div class="field">
+            <label>Student ID</label>
+            <input id="studentId" placeholder="##-####-###">
+        </div>
+
+        <div class="field">
+            <label>First Name</label>
+            <input id="firstName">
+        </div>
+
+        <div class="field">
+            <label>Last Name</label>
+            <input id="lastName">
+        </div>
+
+        <div class="field">
+            <label>Lab 1</label>
+            <input id="labWork1" type="number">
+        </div>
+
+        <div class="field">
+            <label>Lab 2</label>
+            <input id="labWork2" type="number">
+        </div>
+
+        <div class="field">
+            <label>Lab 3</label>
+            <input id="labWork3" type="number">
+        </div>
+
+        <div class="field">
+            <label>Prelim</label>
+            <input id="prelimExam" type="number">
+        </div>
+
+        <div class="field">
+            <label>Attendance</label>
+            <input id="attendance" type="number">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="btnAdd">Add</button>
+        <button id="btnUpdate">Update</button>
+        <button id="btnClear">Clear</button>
+    </div>
+
+    <input id="searchInput" class="search" placeholder="🔍 Search student name">
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>L1</th>
+                <th>L2</th>
+                <th>L3</th>
+                <th>Prelim</th>
+                <th>Att</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
